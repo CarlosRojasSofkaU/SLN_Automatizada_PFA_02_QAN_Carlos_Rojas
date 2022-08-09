@@ -17,8 +17,6 @@ import static com.automationpractice.utils.Utilidades.generarCliente;
 
 public class ContactanosDefinition extends WebUI {
 
-    private Cliente cliente;
-    private InicioPage inicioPage;
     private ContactanosPage contactanosPage;
     private static final Logger LOGGER = Logger.getLogger(ContactanosDefinition.class);
 
@@ -34,10 +32,10 @@ public class ContactanosDefinition extends WebUI {
         }
     }
 
-    @Dado("que el cliente navega hasta la página de contáctanos")
-    public void queElClienteNavegaHastaLaPáginaDeContáctanos() {
+    @Dado("que el cliente navega hasta la pagina de contactanos")
+    public void queElClienteNavegaHastaLaPaginaDeContactanos() {
         try {
-            inicioPage = new InicioPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA);
+            InicioPage inicioPage = new InicioPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA);
             inicioPage.irHaciaContactanos();
             LOGGER.info("Navegando hacia contáctanos");
         } catch (Exception e) {
@@ -50,7 +48,7 @@ public class ContactanosDefinition extends WebUI {
     @Cuando("el cliente ingresa todos los datos obligatorios para contactarse")
     public void elClienteIngresaTodosLosDatosObligatoriosParaContactarse() {
         try {
-            cliente = generarCliente(CODIGO_DE_LENGUAJE_ESPANOL, CODIGO_PAIS, DOMINIO_EMAIL);
+            Cliente cliente = generarCliente(CODIGO_DE_LENGUAJE_ESPANOL, CODIGO_PAIS, DOMINIO_EMAIL);
             LOGGER.info("La Información del usuario fue creada con exito");
             contactanosPage = new ContactanosPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA, cliente);
             contactanosPage.mandarMensajeAServicioAlCliente();
@@ -62,8 +60,8 @@ public class ContactanosDefinition extends WebUI {
         }
     }
 
-    @Entonces("el cliente observará un mensaje de contacto exitoso en la página web.")
-    public void elClienteObservaráUnMensajeDeContactoExitosoEnLaPáginaWeb() {
+    @Entonces("el cliente observara un mensaje de contacto exitoso en la pagina web.")
+    public void elClienteObservaraUnMensajeDeContactoExitosoEnLaPaginaWeb() {
         try {
             Assertions.assertEquals(MSJ_ENVIADO_EXITOSAMENTE_SERVICIO_AL_CLIENTE, contactanosPage.seMandoElMensajeExitosamente());
             LOGGER.info(

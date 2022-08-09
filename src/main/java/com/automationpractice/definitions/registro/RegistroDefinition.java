@@ -34,8 +34,8 @@ public class RegistroDefinition extends WebUI {
         }
     }
 
-    @Dado("que el cliente navega hasta la página de registro")
-    public void queElClienteNavegaHastaLaPáginaDeRegistro() {
+    @Dado("que el cliente navega hasta la pagina de registro")
+    public void queElClienteNavegaHastaLaPaginaDeRegistro() {
         try {
             inicioPage = new InicioPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA);
             inicioPage.irHaciaIniciarSesion();
@@ -47,8 +47,8 @@ public class RegistroDefinition extends WebUI {
         }
     }
 
-    @Cuando("el cliente registra sus datos para una cuenta en línea de forma exitosa")
-    public void elClienteRegistraSusDatosParaUnaCuentaEnLíneaDeFormaExitosa() {
+    @Cuando("el cliente registra sus datos para una cuenta en linea de forma exitosa")
+    public void elClienteRegistraSusDatosParaUnaCuentaEnLineaDeFormaExitosa() {
         try {
             cliente = generarCliente(CODIGO_DE_LENGUAJE_ESPANOL, CODIGO_PAIS, DOMINIO_EMAIL);
             LOGGER.info("La Información del usuario fue creada con correo: " + cliente.getEmail() + " y con contraseña: " + cliente.getContrasena());
@@ -62,8 +62,8 @@ public class RegistroDefinition extends WebUI {
         }
     }
 
-    @Entonces("el cliente quedará logueado dentro de su respectiva sesión per se.")
-    public void elClienteQuedaráLogueadoDentroDeSuRespectivaSesiónPerSe() {
+    @Entonces("el cliente quedara logueado dentro de su respectiva sesion per se.")
+    public void elClienteQuedaraLogueadoDentroDeSuRespectivaSesionPerSe() {
         try {
             Assertions.assertEquals(cliente.getNombre() + " " + cliente.getApellido(), registroPage.seRegistroLaCuentaConExito());
             LOGGER.info(

@@ -22,11 +22,8 @@ import static com.automationpractice.utils.Utilidades.generarCliente;
 public class ManejarCarritoDeComprasDefinition extends WebUI {
 
     private static final Logger LOGGER = Logger.getLogger(ManejarCarritoDeComprasDefinition.class);
-    private Cliente cliente;
-    private RegistroPage registroPage;
     private InicioPage inicioPage;
     private ManejarCarritoDeComprasPage manejarCarritoDeComprasPage;
-    private ArrayList<Producto> listaProductos = new ArrayList<Producto>();
     private double precioTotal = 0;
 
     @Before
@@ -47,9 +44,9 @@ public class ManejarCarritoDeComprasDefinition extends WebUI {
             inicioPage = new InicioPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA);
             inicioPage.irHaciaIniciarSesion();
             LOGGER.info("Navegando hacia registro");
-            cliente = generarCliente(CODIGO_DE_LENGUAJE_ESPANOL, CODIGO_PAIS, DOMINIO_EMAIL);
+            Cliente cliente = generarCliente(CODIGO_DE_LENGUAJE_ESPANOL, CODIGO_PAIS, DOMINIO_EMAIL);
             LOGGER.info("La Información del usuario fue creada con correo: " + cliente.getEmail() + " y con contraseña: " + cliente.getContrasena());
-            registroPage = new RegistroPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA, cliente);
+            RegistroPage registroPage = new RegistroPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA, cliente);
             registroPage.crearUnaCuenta();
             LOGGER.info("El registro fue exitoso");
         } catch (Exception e) {
@@ -59,12 +56,12 @@ public class ManejarCarritoDeComprasDefinition extends WebUI {
         }
     }
 
-    @Cuando("el cliente quiere comprar uno o varios productos {string} y realiza todas las funciones de verificación")
-    public void elClienteQuiereComprarUnoOVariosProductosYRealizaTodasLasFuncionesDeVerificación(String productos) {
+    @Cuando("el cliente quiere comprar uno o varios productos {string} y realiza todas las funciones de verificacion")
+    public void elClienteQuiereComprarUnoOVariosProductosYRealizaTodasLasFuncionesDeVerificacion(String productos) {
         try {
             inicioPage.irHaciaProductosDeMujer();
             manejarCarritoDeComprasPage = new ManejarCarritoDeComprasPage(driver, ESPERA_EXPLICITA_POR_DEFECTO, CON_ESPERA_EXPLICITA);
-            listaProductos = manejarCarritoDeComprasPage.comprandoProductos(productos);
+            ArrayList<Producto> listaProductos = manejarCarritoDeComprasPage.seleccionandoProductos(productos);
             LOGGER.info("Se seleccionaron los productos a comprar exitosamente");
             precioTotal = manejarCarritoDeComprasPage.verificandoProductos(listaProductos);
             LOGGER.info("Se verificó el precio y los productos comprados exitosamente");
@@ -77,8 +74,8 @@ public class ManejarCarritoDeComprasDefinition extends WebUI {
         }
     }
 
-    @Entonces("el cliente observará un mensaje de solicitud de compra exitosa y un precio de orden de sus productos.")
-    public void elClienteObservaráUnMensajeDeSolicitudDeCompraExitosaYUnPrecioDeOrdenDeSusProductos() {
+    @Entonces("el cliente observara el precio de la orden de sus productos.")
+    public void elClienteObservaraElPrecioDeLaOrdenDeSusProductos() {
         try {
             Assertions.assertEquals(precioTotal, manejarCarritoDeComprasPage.fuePagadoElPrecioCorrecto());
             LOGGER.info(
@@ -100,5 +97,20 @@ public class ManejarCarritoDeComprasDefinition extends WebUI {
         } catch (Exception e) {
             quitDriver();
         }
+    }
+
+    @Dado("el cliente selecciono uno o varios productos {string} de la pagina")
+    public void elClienteSeleccionoUnoOVariosProductosDeLaPagina(String productos) {
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Cuando("el cliente quiere eliminar sus productos {string} del carrito de compras")
+    public void elClienteQuiereEliminarSusProductosDelCarritoDeCompras(String productos) {
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Entonces("el cliente observara que el carrito de compras esta vacio.")
+    public void elClienteObservaraQueElCarritoDeComprasEstaVacio() {
+        throw new io.cucumber.java.PendingException();
     }
 }

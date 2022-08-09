@@ -9,6 +9,11 @@ import java.util.Random;
 import static com.automationpractice.utils.Constantes.*;
 
 public class Utilidades {
+
+    private Utilidades() {
+
+    }
+
     public static Cliente generarCliente(String lenguaje, String pais, String dominioCorreo) {
 
         Faker faker = Faker.instance(

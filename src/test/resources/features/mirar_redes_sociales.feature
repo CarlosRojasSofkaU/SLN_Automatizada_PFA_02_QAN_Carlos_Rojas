@@ -6,12 +6,12 @@ Característica:Conocer redes sociales
   Para observar que han compartido
 
   Esquema del escenario: Conocer una red social exitosamente
-    Dado que el cliente esta en la página de inicio
+    Dado que el cliente esta en la pagina de inicio
     Cuando El usuario clickea en la red social "<redSocial>" de la empresa
-    Entonces Se muestra la página de la red social "<redSocial>"
+    Entonces Se muestra la pagina de la red social "<redSocial>"
 
     Ejemplos:
       | redSocial |
       | Facebook  |
       | Twitter   |
-      | Linkedin  |
+      | Youtube   |

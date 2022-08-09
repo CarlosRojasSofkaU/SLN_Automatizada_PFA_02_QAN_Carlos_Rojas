@@ -5,6 +5,6 @@ Característica: Contactar servicio al cliente
   Para poder comunicar mis problemas con la página o con mis productos.
 
   Escenario: Contacto exitoso.
-    Dado que el cliente navega hasta la página de contáctanos
+    Dado que el cliente navega hasta la pagina de contactanos
     Cuando el cliente ingresa todos los datos obligatorios para contactarse
-    Entonces el cliente observará un mensaje de contacto exitoso en la página web.
+    Entonces el cliente observara un mensaje de contacto exitoso en la pagina web.

@@ -6,7 +6,7 @@ Característica:Mirar productos
   Para mirar la descripción del producto y su precio
 
   Esquema del escenario: Observar un producto de manera exitosa.
-    Dado que el cliente esta en la página de inicio
+    Dado que el cliente esta en la pagina de inicio
     Cuando El usuario quiere mirar cierto producto "<producto>"
     Entonces El usuario observa los detalles del producto "<producto>"
 

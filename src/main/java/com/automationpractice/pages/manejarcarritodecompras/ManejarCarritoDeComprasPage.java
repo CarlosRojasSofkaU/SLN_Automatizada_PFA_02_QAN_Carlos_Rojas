@@ -15,10 +15,8 @@ import java.util.ArrayList;
 public class ManejarCarritoDeComprasPage extends AccionesComunesEnPaginas {
 
     public static final Logger LOGGER = Logger.getLogger(ManejarCarritoDeComprasPage.class);
-    private String[] arrayDeProductos;
     private String[] productoSingular = {""};
-    private Producto producto;
-    private ArrayList<Producto> listaDeProductos = new ArrayList<Producto>();
+    private ArrayList<Producto> listaDeProductos = new ArrayList<>();
     private String localizadorPrecio = "//parent::p//parent::td//following-sibling::td[@class='cart_unit']/span/span";
     private String localizadorCantidad = "//parent::p//parent::td//following-sibling::td[@class='cart_quantity text-center']/input";
     private String localizadorBtnAlCarrito = "//parent::h5//following-sibling::div[@class='button-container']/a[@title='Add to cart']";
@@ -103,7 +101,8 @@ public class ManejarCarritoDeComprasPage extends AccionesComunesEnPaginas {
         pageFactoryInitElement(driver, this);
     }
 
-    public ArrayList<Producto> comprandoProductos(String productos) {
+    public ArrayList<Producto> seleccionandoProductos(String productos) {
+        String[] arrayDeProductos;
         if (productos.contains(",")) {
             arrayDeProductos = productos.split(",");
         } else {
@@ -113,7 +112,7 @@ public class ManejarCarritoDeComprasPage extends AccionesComunesEnPaginas {
         for (int i = 0; i < arrayDeProductos.length; i++) {
             withExplicitWaitUntilIsNotVisible(By.xpath("//span[@title='Continue shopping']"));
             arrayDeProductos[i] = arrayDeProductos[i].trim();
-            producto = new Producto();
+            Producto producto = new Producto();
             producto.setNombreProducto(arrayDeProductos[i]);
             moveMouseOver(driver.findElement(By.xpath("//a[@title='" + arrayDeProductos[i] + "']")));
             clickOn(driver.findElement(By.xpath("//a[contains(text(), '" + arrayDeProductos[i] + "')]" + localizadorBtnAlCarrito)));
