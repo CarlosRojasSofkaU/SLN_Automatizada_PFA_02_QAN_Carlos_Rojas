@@ -1,6 +1,6 @@
 package com.automationpractice.utils;
 
-public enum Seconds {
+public enum Segundos {
     ZERO_SECONDS(0),
     ONE_SECONDS(1),
     TWO_SECONDS(2),
@@ -18,7 +18,7 @@ public enum Seconds {
 
     private final int value;
 
-    Seconds(int value) {
+    Segundos(int value) {
         this.value = value;
     }
 

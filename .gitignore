@@ -2,6 +2,7 @@
 # Edit at https://www.gitignore.io/?templates=java,bluej,sonar,macos,maven,gradle,android,windows,eclipse,netbeans,intellij,sonarqube
 #Custom
 target/
+report.log
 null/
 ### Android ###
 # Built application files

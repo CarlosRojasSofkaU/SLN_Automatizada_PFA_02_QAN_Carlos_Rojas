@@ -5,15 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
-public class CommonActionOnPages {
-    private static final Logger LOGGER = Logger.getLogger(CommonActionOnPages.class);
+public class AccionesComunesEnPaginas extends BaseSikulix {
+    private static final Logger LOGGER = Logger.getLogger(AccionesComunesEnPaginas.class);
     private static final String WEBDRIVER_NULL_MESSAGE = "\nWARNING!\n\rThe Webdriver is null, please check it.\n";
     protected WebDriver driver;
 
@@ -21,7 +23,7 @@ public class CommonActionOnPages {
     private WebDriverWait webDriverExplicitWait;
 
     //Constructor
-    public CommonActionOnPages(WebDriver driver) {
+    public AccionesComunesEnPaginas(WebDriver driver) {
         try {
             if (driver == null)
                 LOGGER.warn(WEBDRIVER_NULL_MESSAGE);
@@ -33,7 +35,7 @@ public class CommonActionOnPages {
         }
     }
 
-    public CommonActionOnPages(WebDriver driver, int seconds, boolean explicitTime) {
+    public AccionesComunesEnPaginas(WebDriver driver, int seconds, boolean explicitTime) {
         try {
             if (driver == null)
                 LOGGER.warn(WEBDRIVER_NULL_MESSAGE);
@@ -103,6 +105,32 @@ public class CommonActionOnPages {
 
     protected void withExplicitWaitClickOn(WebElement webElement) {
         webDriverExplicitWait.until(elementToBeClickable(webElement)).click();
+    }
+
+    //
+
+    protected void selectFromOptionsByValue(WebElement webElement, String value) {
+        Select select = new Select(webElement);
+        select.selectByValue(value);
+    }
+
+    protected void selectFromOptionsByText(WebElement webElement, String text) {
+        Select select = new Select(webElement);
+        select.selectByVisibleText(text);
+    }
+
+    //
+
+    protected void moveMouseOver(WebElement webElement) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(webElement).perform();
+    }
+
+    protected void moveMouseOver(By locator) {
+        Actions actions = new Actions(driver);
+        WebElement webElement;
+        webElement = driver.findElement(locator);
+        actions.moveToElement(webElement).perform();
     }
 
     //

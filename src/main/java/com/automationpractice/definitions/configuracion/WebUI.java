@@ -1,4 +1,4 @@
-package com.automationpractice.definitions.setup;
+package com.automationpractice.definitions.configuracion;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.PropertyConfigurator;
@@ -11,7 +11,7 @@ import static com.google.common.base.StandardSystemProperty.USER_DIR;
 public class WebUI {
     private String os;
 
-    private static final String SWAGLABS_URL = "https://www.saucedemo.com/";
+    private static final String AUTOMATIONPRACTICE_URL = "http://automationpractice.com/index.php";
 
     protected WebDriver driver;
 
@@ -22,7 +22,7 @@ public class WebUI {
 
     protected void generalSetUp() {
         driver = new ChromeDriver();
-        driver.get(SWAGLABS_URL);
+        driver.get(AUTOMATIONPRACTICE_URL);
         driver.manage().window().maximize();
     }
 
