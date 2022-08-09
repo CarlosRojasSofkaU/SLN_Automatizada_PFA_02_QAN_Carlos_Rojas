@@ -6,7 +6,7 @@ import org.sikuli.script.Screen;
 public class BaseSikulix {
     private static final Logger LOGGER = Logger.getLogger(BaseSikulix.class);
 
-    public BaseSikulix() {
+    private BaseSikulix() {
     }
 
     protected void clickOn(String path) {

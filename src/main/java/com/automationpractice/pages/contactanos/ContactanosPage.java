@@ -2,6 +2,7 @@ package com.automationpractice.pages.contactanos;
 
 import com.automationpractice.models.Cliente;
 import com.automationpractice.pages.common.AccionesComunesEnPaginas;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ContactanosPage extends AccionesComunesEnPaginas {
 
+    public static final Logger LOGGER = Logger.getLogger(ContactanosPage.class);
     private Cliente cliente;
 
     @CacheLookup

@@ -1,16 +1,11 @@
 package com.automationpractice.pages.inicio;
 
-import com.automationpractice.models.Cliente;
-import com.automationpractice.models.Producto;
 import com.automationpractice.pages.common.AccionesComunesEnPaginas;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.ArrayList;
 
 public class InicioPage extends AccionesComunesEnPaginas {
 

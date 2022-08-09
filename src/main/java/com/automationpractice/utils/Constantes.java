@@ -1,6 +1,10 @@
 package com.automationpractice.utils;
 
 public class Constantes {
+
+    private Constantes(){
+
+    }
     public static final int ESPERA_EXPLICITA_POR_DEFECTO = 30;
     public static final boolean CON_ESPERA_EXPLICITA = true;
     public static final String ESTADO_POR_DEFECTO = "Florida";

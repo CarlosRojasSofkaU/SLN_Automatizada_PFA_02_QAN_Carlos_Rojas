@@ -43,6 +43,7 @@ public class ContactanosDefinition extends WebUI {
         } catch (Exception e) {
             LOGGER.info("Error en paso DADO:" + e.getMessage());
             LOGGER.error(e.getMessage(), e);
+            Assertions.fail(e.getMessage(), e);
         }
     }
 
@@ -57,6 +58,7 @@ public class ContactanosDefinition extends WebUI {
         } catch (Exception e) {
             LOGGER.info("Error en paso Cuando:" + e.getMessage());
             LOGGER.error(e.getMessage(), e);
+            Assertions.fail(e.getMessage(), e);
         }
     }
 
@@ -65,12 +67,12 @@ public class ContactanosDefinition extends WebUI {
         try {
             Assertions.assertEquals(MSJ_ENVIADO_EXITOSAMENTE_SERVICIO_AL_CLIENTE, contactanosPage.seMandoElMensajeExitosamente());
             LOGGER.info(
-                    "El usuario debe observar un mensaje que dice: "+MSJ_ENVIADO_EXITOSAMENTE_SERVICIO_AL_CLIENTE+", y observa: " + contactanosPage.seMandoElMensajeExitosamente()
+                    "El usuario debe observar un mensaje que dice: " + MSJ_ENVIADO_EXITOSAMENTE_SERVICIO_AL_CLIENTE + ", y observa: " + contactanosPage.seMandoElMensajeExitosamente()
             );
         } catch (Exception e) {
-            Assertions.fail(e.getMessage(), e);
             LOGGER.info("Error en paso ENTONCES:" + e.getMessage());
             LOGGER.error(e.getMessage(), e);
+            Assertions.fail(e.getMessage(), e);
         }
     }
 

@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.invisibilityOfElementLocated;
 
 public class AccionesComunesEnPaginas extends BaseSikulix {
     private static final Logger LOGGER = Logger.getLogger(AccionesComunesEnPaginas.class);
@@ -105,6 +106,12 @@ public class AccionesComunesEnPaginas extends BaseSikulix {
 
     protected void withExplicitWaitClickOn(WebElement webElement) {
         webDriverExplicitWait.until(elementToBeClickable(webElement)).click();
+    }
+
+    //
+
+    protected void withExplicitWaitUntilIsNotVisible(By locator) {
+        webDriverExplicitWait.until(invisibilityOfElementLocated(locator));
     }
 
     //

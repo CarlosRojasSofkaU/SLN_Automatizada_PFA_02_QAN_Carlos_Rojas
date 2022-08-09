@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         publish = true,
         features = {"src/test/resources/features/manejar_carrito_de_compras.feature"},
         glue = {"com.automationpractice.definitions.manejarcarritodecompras"},
-        tags = ""
+        tags = "@RutaCritica"
 )
 public class ManejarCarritoDeComprasRunner {
 }

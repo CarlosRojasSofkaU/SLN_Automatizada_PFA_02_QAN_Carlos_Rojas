@@ -7,15 +7,16 @@ Característica: Administrar carrito de compras
   Antecedentes:
     Dado que el cliente se haya registrado o logueado en la plataforma
 
+  @RutaCritica
   Esquema del escenario: Solicitud de compra de producto exitosa.
     Cuando el cliente quiere comprar uno o varios productos "<productos>" y realiza todas las funciones de verificación
     Entonces el cliente observará un mensaje de solicitud de compra exitosa y un precio de orden de sus productos.
 
     Ejemplos:
-      | productos              |
-      | Blouse                 |
-      | Blouse, Blouse         |
-      | Blouse, Blouse, Blouse |
+      | productos                                          |
+      | Blouse                                             |
+      | Blouse, Faded Short Sleeve T-shirts                |
+      | Blouse, Printed Dress, Faded Short Sleeve T-shirts |
 
   Escenario: Limpiar productos del carrito de compras.
     Dado el cliente seleccionó uno o varios productos "<products>" de la página

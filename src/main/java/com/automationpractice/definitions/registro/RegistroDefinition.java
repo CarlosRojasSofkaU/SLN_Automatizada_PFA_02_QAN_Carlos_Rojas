@@ -43,6 +43,7 @@ public class RegistroDefinition extends WebUI {
         } catch (Exception e) {
             LOGGER.info("Error en paso DADO:" + e.getMessage());
             LOGGER.error(e.getMessage(), e);
+            Assertions.fail(e.getMessage(), e);
         }
     }
 
@@ -57,6 +58,7 @@ public class RegistroDefinition extends WebUI {
         } catch (Exception e) {
             LOGGER.info("Error en paso Cuando:" + e.getMessage());
             LOGGER.error(e.getMessage(), e);
+            Assertions.fail(e.getMessage(), e);
         }
     }
 
@@ -68,9 +70,9 @@ public class RegistroDefinition extends WebUI {
                     "El usuario debe observar que el nombre de la cuenta es: " + cliente.getNombre() + " " + cliente.getApellido() + ", y observa: " + registroPage.seRegistroLaCuentaConExito()
             );
         } catch (Exception e) {
-            Assertions.fail(e.getMessage(), e);
             LOGGER.info("Error en paso ENTONCES:" + e.getMessage());
             LOGGER.error(e.getMessage(), e);
+            Assertions.fail(e.getMessage(), e);
         }
     }
 
