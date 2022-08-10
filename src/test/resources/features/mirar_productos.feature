@@ -11,7 +11,7 @@ Característica:Mirar productos
     Entonces El usuario observa los detalles del producto "<producto>"
 
     Ejemplos:
-      | producto      |
-      | Backpack      |
-      | Fleece Jacket |
-      | Onesie        |
+      | producto                    |
+      | Blouse                      |
+      | Faded Short Sleeve T-shirts |
+      | Printed Dress               |

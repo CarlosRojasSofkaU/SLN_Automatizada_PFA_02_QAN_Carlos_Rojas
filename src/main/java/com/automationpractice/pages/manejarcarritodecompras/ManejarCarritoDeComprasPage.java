@@ -28,14 +28,6 @@ public class ManejarCarritoDeComprasPage extends AccionesComunesEnPaginas {
     WebElement linkCarritoDeCompras;
 
     @CacheLookup
-    @FindBy(id = "layer_cart_product_price")
-    WebElement textoPrecioProducto;
-
-    @CacheLookup
-    @FindBy(id = "layer_cart_product_quantity")
-    WebElement textoCantidadProducto;
-
-    @CacheLookup
     @FindBy(xpath = "//span[@title='Continue shopping']")
     WebElement botonContinuarComprando;
 
