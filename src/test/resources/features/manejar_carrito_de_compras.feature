@@ -24,7 +24,7 @@ Característica: Manejar carrito de compras
     Entonces el cliente observara que el carrito de compras esta vacio.
 
     Ejemplos:
-      | productos                   |
-      | Blouse                      |
-      | Faded Short Sleeve T-shirts |
-      | Printed Dress               |
+      | productos                                          |
+      | Blouse                                             |
+      | Blouse, Faded Short Sleeve T-shirts                |
+      | Blouse, Printed Dress, Faded Short Sleeve T-shirts |

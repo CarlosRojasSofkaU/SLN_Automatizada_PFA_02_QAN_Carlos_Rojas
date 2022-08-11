@@ -1,7 +1,7 @@
 package com.automationpractice.pages.manejarcarritodecompras;
 
 import com.automationpractice.models.Producto;
-import com.automationpractice.pages.common.AccionesComunesEnPaginas;
+import com.automationpractice.pages.comun.AccionesComunesEnPaginas;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;

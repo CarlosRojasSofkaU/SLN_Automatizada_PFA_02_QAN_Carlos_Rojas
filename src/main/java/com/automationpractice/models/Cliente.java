@@ -19,5 +19,4 @@ public class Cliente {
     private String mensajeContactanos;
     private String pedidoReferenciaContactanos;
     private String temaContactanos;
-    private Double totalOrderPrice;
 }

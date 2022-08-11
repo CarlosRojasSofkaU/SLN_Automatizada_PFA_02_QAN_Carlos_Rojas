@@ -22,26 +22,31 @@ Para esto se definen las siguientes secciones:
 
 ## Configuración inicial
 
-Para poder correr la prueba automatizada de la ruta crítica (comprar productos) se debe ubicar en la ruta del repositorio del proyecto (donde se encuentre la carpeta gradle), y ejecutar en una terminal el comando **./gradlew clean build test --tests (asterisco)ManejarCarritoDeComprasRunner(asterisco) -i**
-En caso de que se quieran correr todas las pruebas automatizadas se debe correr el código **./gradlew clean build test -i**
+La rama donde se encuentran las pruebas automatizadas es **automation-sln-pfa-03-qan-carlos-rojas**
+
+Para poder correr la prueba automatizada de la ruta crítica (comprar productos) se debe ubicar en la ruta del repositorio del proyecto (donde se encuentre la carpeta gradle), y ejecutar en una terminal el comando **./gradlew clean build test --tests \*ManejarCarritoDeComprasRunner\* aggregate -i**
+
+En caso de que se quieran correr todas las pruebas automatizadas se debe correr el código **./gradlew clean build test aggregate -i**  (tener en cuenta que los escenarios de mirar redes sociales y el de mirar productos aún no están implementados)
 
 
 ## Requerimientos y Herramientas
 
-|Herramienta	|Versión														|Descripción										|
-|-----------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-|JavaFaker		|1.0.2														|Usado para la estrategia de datos							|	
-|JUnit		|org.junit.jupiter:junit-jupiter-engine:5.8.2, org.junit.jupiter:junit-jupiter-api:5.8.2	|Usado para el manejo de las pruebas						|			
-|Patrón de  diseño|															|POM con Page Factory									|
-|Cucumber		|io.cucumber:cucumber-java:7.3.3', io.cucumber:cucumber-junit:7.3.3				|Usado para el manejo del gherkin y de las características			|			
-|Selenium		|3.141.59														|Usado para realizar las pruebas automatizadas					|		
-|GitLab		|															|Sistema de control de versionamiento						|	
-|IntelliJ		|Versión 2022.1.1													|IDE implementado para la construcción de codigo				|		
-|JAVA JDK		|Versión 13														|Lenguaje de programación implementado						|
-|Gradle		|Versión 7.4.1													|Gestor de dependencias implementado						|	
-|Gherkin		|221.5591. 19													|Usado para la implementación de BDD y el vínculo negocio - tech		|		
-|ChromeDriver	|webdrivermanager (versión 104.0.5112.79 en el momento)						|Navegador implementado para las pruebas						|
-|Lombok		|Versión 6.4.2													|Usado para implementar métodos y constructores en tiempo de ejecución	|		
+| Herramienta	        | Versión														                                                                              | Descripción										                                                  |
+|---------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| JavaFaker		         | 1.0.2														                                                                                | Usado para la estrategia de datos							                               |	
+| JUnit		             | org.junit.jupiter:junit-jupiter-engine:5.8.2, org.junit.jupiter:junit-jupiter-api:5.8.2	           | Usado para el manejo de las pruebas						                              |			
+| Patrón de  diseño   | 															                                                                                    | POM con Page Factory									                                          |
+| Cucumber		          | io.cucumber:cucumber-junit:6.0.0', "io.cucumber:cucumber-core:6.6.0", 'io.cucumber:cucumber-java:6.0.0'								                             | Usado para el manejo del gherkin y de las características			           |			
+| Selenium		          | 3.141.59														                                                                             | Usado para realizar las pruebas automatizadas					                     |		
+| GitLab		            | 															                                                                                    | Sistema de control de versionamiento						                             |	
+| IntelliJ		          | Versión 2022.1.1													                                                                      | IDE implementado para la construcción de codigo				                    |		
+| JAVA JDK		          | Versión 13														                                                                           | Lenguaje de programación implementado						                            |
+| Gradle		            | Versión 7.4.1													                                                                         | Gestor de dependencias implementado						                              |	
+| Gherkin		           | 221.5591. 19													                                                                          | Usado para la implementación de BDD y el vínculo negocio - tech		      |		
+| ChromeDriver	       | webdrivermanager (versión 104.0.5112.79 en el momento)						                                       | Navegador implementado para las pruebas						                          |
+| Lombok		            | Versión 6.4.2													                                                                         | Usado para implementar métodos y constructores en tiempo de ejecución	 |
+| Sistema operativo		 | Windows												                                                                                | Sistema operativo en el que se realizarán las pruebas	                 |
+| Serenity		          | 'net.serenity-bdd:serenity-cucumber6:2.3.4', 'net.serenity-bdd:serenity-core:2.3.4', "net.serenity-bdd:serenity-gradle-plugin:2.0.80												 | Sistema operativo en el que se realizarán las pruebas	                 |
 
 
 ## Funcionalidades

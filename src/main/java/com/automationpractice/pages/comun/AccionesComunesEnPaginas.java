@@ -1,4 +1,4 @@
-package com.automationpractice.pages.common;
+package com.automationpractice.pages.comun;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -96,7 +96,7 @@ public class AccionesComunesEnPaginas extends BaseSikulix {
 
     //
 
-    protected void clickOn(By locator) {
+    protected void clickOnLocator(By locator) {
         driver.findElement(locator).click();
     }
 
@@ -133,7 +133,7 @@ public class AccionesComunesEnPaginas extends BaseSikulix {
         actions.moveToElement(webElement).perform();
     }
 
-    protected void moveMouseOver(By locator) {
+    protected void moveMouseOverOnLocator(By locator) {
         Actions actions = new Actions(driver);
         WebElement webElement;
         webElement = driver.findElement(locator);

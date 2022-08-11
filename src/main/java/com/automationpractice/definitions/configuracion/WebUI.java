@@ -15,13 +15,14 @@ public class WebUI {
 
     protected WebDriver driver;
 
-    protected void setUpWebDriver() {
+    protected void setUpWebDriver(WebDriver dr) {
+        driver = dr;
         os = System.getProperty("os.name").toLowerCase();
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
     }
 
     protected void generalSetUp() {
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         driver.get(AUTOMATIONPRACTICE_URL);
         driver.manage().window().maximize();
     }

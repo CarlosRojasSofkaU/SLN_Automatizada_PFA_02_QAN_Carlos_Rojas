@@ -1,4 +1,4 @@
-package com.automationpractice.pages.common;
+package com.automationpractice.pages.comun;
 
 import org.apache.log4j.Logger;
 import org.sikuli.script.Screen;
@@ -9,7 +9,8 @@ public class BaseSikulix {
     protected BaseSikulix() {
     }
 
-    protected void clickOn(String path) {
+
+    protected void clickOnPath(String path) {
         Screen s = new Screen();
 
         try {

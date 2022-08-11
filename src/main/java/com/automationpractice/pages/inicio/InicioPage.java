@@ -1,6 +1,6 @@
 package com.automationpractice.pages.inicio;
 
-import com.automationpractice.pages.common.AccionesComunesEnPaginas;
+import com.automationpractice.pages.comun.AccionesComunesEnPaginas;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

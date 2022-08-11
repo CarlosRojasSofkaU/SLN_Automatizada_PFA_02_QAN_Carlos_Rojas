@@ -9,8 +9,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.thucydides.core.annotations.Managed;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.WebDriver;
 
 import static com.automationpractice.utils.Constantes.*;
 import static com.automationpractice.utils.Utilidades.generarCliente;
@@ -19,14 +21,16 @@ public class ContactanosDefinition extends WebUI {
 
     private ContactanosPage contactanosPage;
     private static final Logger LOGGER = Logger.getLogger(ContactanosDefinition.class);
+    @Managed
+    private WebDriver dr;
 
     @Before
     public void configuracion() {
         try {
-            setUpWebDriver();
+            setUpWebDriver(dr);
             setUpLog4j2();
             generalSetUp();
-            LOGGER.info("El navegador está funcionndo correctamente");
+            LOGGER.info("El navegador está funcionando correctamente");
         } catch (Exception e) {
             LOGGER.info("Error en la configuración del navegador:" + e.getMessage());
         }
