@@ -22,7 +22,7 @@ Para esto se definen las siguientes secciones:
 
 ## Configuración inicial
 
-La rama donde se encuentran las pruebas automatizadas es **automation-sln-pfa-03-qan-carlos-rojas**
+La rama donde se encuentran las pruebas automatizadas es **automation-sln-pfa-02-qan-carlos-rojas**
 
 Para poder correr la prueba automatizada de la ruta crítica (comprar productos) se debe ubicar en la ruta del repositorio del proyecto (donde se encuentre la carpeta gradle), y ejecutar en una terminal el comando **./gradlew clean build test --tests \*ManejarCarritoDeComprasRunner\* aggregate -i**
 
