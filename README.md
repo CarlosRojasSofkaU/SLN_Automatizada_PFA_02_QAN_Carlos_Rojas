@@ -1,5 +1,5 @@
 # Proceso de selección de analistas de calidad
-# SLN_Automatizada_PFA_03_QAN_Carlos_Rojas
+# SLN_Automatizada_PFA_02_QAN_Carlos_Rojas
 # Realizado por Carlos Fernando Rojas Cortés
 
 En este proyecto se pretende realizar unas pruebas automatizadas para una tienda virtual, para evaluar conocimientos como:
