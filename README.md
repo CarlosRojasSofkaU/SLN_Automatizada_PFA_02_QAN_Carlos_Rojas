@@ -1,5 +1,5 @@
 # Proceso de selección de analistas de calidad
-# SLN_Automatizada_PFA_03_QAN_Carlos_Rojas
+# SLN_Automatizada_PFA_02_QAN_Carlos_Rojas
 # Realizado por Carlos Fernando Rojas Cortés
 
 En este proyecto se pretende realizar unas pruebas automatizadas para una tienda virtual, para evaluar conocimientos como:
@@ -22,7 +22,7 @@ Para esto se definen las siguientes secciones:
 
 ## Configuración inicial
 
-La rama donde se encuentran las pruebas automatizadas es **automation-sln-pfa-03-qan-carlos-rojas**
+La rama donde se encuentran las pruebas automatizadas es **automation-sln-pfa-02-qan-carlos-rojas**
 
 Para poder correr la prueba automatizada de la ruta crítica (comprar productos) se debe ubicar en la ruta del repositorio del proyecto (donde se encuentre la carpeta gradle), y ejecutar en una terminal el comando **./gradlew clean build test --tests \*ManejarCarritoDeComprasRunner\* aggregate -i**
 
